@@ -10,6 +10,20 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    
+    /* Constants for API */
+    
+    var baseURLString = "http://api.nestoria.es/api?"
+    var action = "search_listings"
+    var encoding = "json"
+    
+    /* Location argument (&place_name) */
+    var city = "Sevilla"
+    
+    /* Filter (&bedroom_max) */
+    var rooms = 2
+    
+    
 
     var window: UIWindow?
 
