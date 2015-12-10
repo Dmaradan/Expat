@@ -30,15 +30,25 @@ class CountryTableViewController: UITableViewController {
         return countries.count
     }
 
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("CountryCell", forIndexPath: indexPath) as! CountryTableViewCell
 
         // Configure the cell...
+        cell.nameLabel.text = countries[indexPath.row]
 
         return cell
     }
-    */
+    
+    override func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+        performSegueWithIdentifier("showCity", sender: self)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let cityVC = segue.destinationViewController as? CityTableViewController
+        
+    }
+    
 
     /*
     // Override to support conditional editing of the table view.

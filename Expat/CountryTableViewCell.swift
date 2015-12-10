@@ -9,6 +9,11 @@
 import UIKit
 
 class CountryTableViewCell: UITableViewCell {
+    
+    // MARK: Outlets
+    
+    @IBOutlet weak var nameLabel: UILabel!
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()

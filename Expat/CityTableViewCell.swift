@@ -9,6 +9,12 @@
 import UIKit
 
 class CityTableViewCell: UITableViewCell {
+    
+    // MARK: Outlets
+    
+    @IBOutlet weak var nameLabel: UILabel!
+
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var encoding = "json"
     
     /* Location argument (&place_name) */
-    var city = "Sevilla"
+    var city : String?
     
     /* Filter (&bedroom_max) */
     var rooms = 2
