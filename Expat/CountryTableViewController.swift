@@ -47,6 +47,11 @@ class CountryTableViewController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let cityVC = segue.destinationViewController as? CityTableViewController
         
+        if let selectedCountryCell = sender as? CountryTableViewCell {
+            
+            cityVC?.countryCode = selectedCountryCell.nameLabel.text
+        }
+        
     }
     
 

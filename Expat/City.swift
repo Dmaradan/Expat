@@ -12,14 +12,12 @@ import UIKit
 class City: NSObject {
     
     var name: String
-    var country: String
     var numRooms: Int
     var averagePrice: Int
     
-    init(theName: String, theCountry: String, theNumOfRooms: Int, theAveragePrice: Int){
+    init(theName: String, theNumOfRooms: Int, theAveragePrice: Int){
         
         name = theName
-        country = theCountry
         numRooms = theNumOfRooms
         averagePrice = theAveragePrice
         

@@ -9,8 +9,9 @@
 import UIKit
 
 class CityTableViewController: UITableViewController {
-    
-    var cities = ["Sevilla"]
+
+    var countryCode: String?
+    var spanishCities = ["Sevilla"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +37,11 @@ class CityTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return cities.count
+        if countryCode == "Spain" {
+            return spanishCities.count
+        } else {
+            return 0   //Eventually will add other country codes, like 'UK', etc
+        }
     }
 
     
@@ -44,7 +49,9 @@ class CityTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("CityCell", forIndexPath: indexPath) as! CityTableViewCell
 
         // Configure the cell...
-        cell.nameLabel.text = cities[indexPath.row]
+        if countryCode == "Spain" {
+            cell.nameLabel.text = spanishCities[indexPath.row]
+        }
 
         return cell
     }
