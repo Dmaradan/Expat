@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Select a Country-->
@@ -80,7 +81,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="nameLabel" destination="KnV-CN-NhP" id="erS-jj-sXP"/>
-                                    <segue destination="cmb-RS-cku" kind="show" id="Ns6-4d-ZBC"/>
+                                    <segue destination="cmb-RS-cku" kind="show" identifier="showDetail" id="Ns6-4d-ZBC"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -94,10 +95,10 @@
             </objects>
             <point key="canvasLocation" x="1996" y="335"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="QIN-P3-Vo0">
             <objects>
-                <viewController id="cmb-RS-cku" sceneMemberID="viewController">
+                <viewController id="cmb-RS-cku" customClass="DetailViewController" customModule="Expat" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kQP-mN-e5M"/>
                         <viewControllerLayoutGuide type="bottom" id="0aX-Kn-a4E"/>
@@ -106,12 +107,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mdl-xd-b6e">
-                                <rect key="frame" x="0.0" y="64" width="600" height="202"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mdl-xd-b6e">
+                                <rect key="frame" x="0.0" y="111" width="600" height="202"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sevilla" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="33m-ml-ECu">
+                                <rect key="frame" x="20" y="82" width="560" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="eMP-Sr-OTb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bWe-g8-KuY">
+                                <rect key="frame" x="20" y="338" width="560" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="cMi-CT-KFd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bWe-g8-KuY" firstAttribute="top" secondItem="mdl-xd-b6e" secondAttribute="bottom" constant="25" id="FfW-Gx-6p7"/>
+                            <constraint firstItem="mdl-xd-b6e" firstAttribute="leading" secondItem="OOd-oK-eKE" secondAttribute="leading" id="IlF-Lo-9WD"/>
+                            <constraint firstItem="mdl-xd-b6e" firstAttribute="top" secondItem="33m-ml-ECu" secondAttribute="bottom" constant="8" symbolic="YES" id="QTO-Fc-pdY"/>
+                            <constraint firstItem="0aX-Kn-a4E" firstAttribute="top" secondItem="bWe-g8-KuY" secondAttribute="bottom" constant="210" id="Qs0-VO-0Aa"/>
+                            <constraint firstItem="33m-ml-ECu" firstAttribute="top" secondItem="kQP-mN-e5M" secondAttribute="bottom" constant="18" id="ZuT-Ag-adH"/>
+                            <constraint firstItem="33m-ml-ECu" firstAttribute="centerX" secondItem="mdl-xd-b6e" secondAttribute="centerX" id="eWh-Tn-HPG"/>
+                            <constraint firstItem="bWe-g8-KuY" firstAttribute="leading" secondItem="OOd-oK-eKE" secondAttribute="leadingMargin" id="hAC-qo-XNk"/>
+                            <constraint firstItem="bWe-g8-KuY" firstAttribute="leading" secondItem="33m-ml-ECu" secondAttribute="leading" id="l0d-ZR-hh1"/>
+                            <constraint firstAttribute="trailing" secondItem="mdl-xd-b6e" secondAttribute="trailing" id="uCT-bJ-wfk"/>
+                            <constraint firstItem="bWe-g8-KuY" firstAttribute="trailing" secondItem="33m-ml-ECu" secondAttribute="trailing" id="vxR-Oa-9oP"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="image" destination="mdl-xd-b6e" id="kc9-hd-jPA"/>
+                        <outlet property="name" destination="33m-ml-ECu" id="V6I-y0-C8z"/>
+                        <outlet property="shortDescription" destination="bWe-g8-KuY" id="LrM-dj-xfr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nSP-jx-nbM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

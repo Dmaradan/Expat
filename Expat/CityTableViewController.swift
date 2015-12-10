@@ -11,16 +11,12 @@ import UIKit
 class CityTableViewController: UITableViewController {
 
     var countryCode: String?
-    var spanishCities = ["Sevilla"]
+    //var spanishCities = ["Sevilla"]
+    //var country: NSObject?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -38,9 +34,11 @@ class CityTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         if countryCode == "Spain" {
-            return spanishCities.count
+            return Spain.cities.count
+        } else if countryCode == "UK" {
+            return UK.cities.count
         } else {
-            return 0   //Eventually will add other country codes, like 'UK', etc
+            return 0
         }
     }
 
@@ -50,10 +48,16 @@ class CityTableViewController: UITableViewController {
 
         // Configure the cell...
         if countryCode == "Spain" {
-            cell.nameLabel.text = spanishCities[indexPath.row]
+            cell.nameLabel.text = Spain.cities[indexPath.row].name
+        } else if countryCode == "UK" {
+            cell.nameLabel.text = UK.cities[indexPath.row].name
         }
 
         return cell
+    }
+    
+    override func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+        performSegueWithIdentifier("showDetail", sender: self)
     }
     
 
@@ -92,14 +96,23 @@ class CityTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        
+        let detailVC = segue.destinationViewController as! DetailViewController
+        
+        if let selectedCityCell = sender as? CityTableViewCell {
+            
+            let indexPath = tableView.indexPathForCell(selectedCityCell)!
+            if countryCode == "Spain" {
+                detailVC.city = Spain.cities[indexPath.row]
+                
+            } else if countryCode == "UK" {
+                detailVC.city = UK.cities[indexPath.row]
+            }
+        }
     }
-    */
-
 }

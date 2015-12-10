@@ -17,6 +17,8 @@
 		CA77E02B1C17A951000AFD89 /* CountryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA77E02A1C17A951000AFD89 /* CountryTableViewCell.swift */; };
 		CA77E02D1C17A96A000AFD89 /* CityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA77E02C1C17A96A000AFD89 /* CityTableViewCell.swift */; };
 		CAD9490D1C1A123F005B461F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD9490C1C1A123F005B461F /* DetailViewController.swift */; };
+		CAD949111C1A1A2C005B461F /* Spain.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD949101C1A1A2C005B461F /* Spain.swift */; };
+		CAD949151C1A2124005B461F /* UK.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD949141C1A2124005B461F /* UK.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		CA77E02A1C17A951000AFD89 /* CountryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryTableViewCell.swift; sourceTree = "<group>"; };
 		CA77E02C1C17A96A000AFD89 /* CityTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityTableViewCell.swift; sourceTree = "<group>"; };
 		CAD9490C1C1A123F005B461F /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		CAD949101C1A1A2C005B461F /* Spain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spain.swift; sourceTree = "<group>"; };
+		CAD949141C1A2124005B461F /* UK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UK.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +84,8 @@
 			isa = PBXGroup;
 			children = (
 				CA77E01D1C17A755000AFD89 /* City.swift */,
+				CAD949101C1A1A2C005B461F /* Spain.swift */,
+				CAD949141C1A2124005B461F /* UK.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -175,6 +181,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA77E02D1C17A96A000AFD89 /* CityTableViewCell.swift in Sources */,
+				CAD949111C1A1A2C005B461F /* Spain.swift in Sources */,
+				CAD949151C1A2124005B461F /* UK.swift in Sources */,
 				CA77E0281C17A858000AFD89 /* CityTableViewController.swift in Sources */,
 				CA77DFC11C0E6051000AFD89 /* AppDelegate.swift in Sources */,
 				CA77E01E1C17A755000AFD89 /* City.swift in Sources */,

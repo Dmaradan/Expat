@@ -9,17 +9,31 @@
 import UIKit
 
 class DetailViewController: UIViewController {
+    
+    var city: City?
+    
+    // MARK: Outlets
+    
+    @IBOutlet weak var name: UILabel!
+    
+    @IBOutlet weak var image: UIImageView!
+    
+    
+    @IBOutlet weak var shortDescription: UILabel!
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        name.text = city?.name
+        image.image = city?.image
+        shortDescription.text = city?.description
 
-        // Do any additional setup after loading the view.
+        
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+   
     
 
     

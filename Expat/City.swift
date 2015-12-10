@@ -9,19 +9,23 @@
 import Foundation
 import UIKit
 
-class City: NSObject {
+struct City {
     
     var name: String
-    var numRooms: Int
-    var averagePrice: Int
+    var description: String
+    var image: UIImage
+    var numRooms: Int?
+    var averagePrice: Int?
     
-    init(theName: String, theNumOfRooms: Int, theAveragePrice: Int){
+    init(theName: String, theDescription: String) {
         
         name = theName
-        numRooms = theNumOfRooms
-        averagePrice = theAveragePrice
+        description = theDescription
+        image = UIImage(named: "\(name)")!
         
-        super.init()
+        
+        //super.init()
     }
 
 }
+
