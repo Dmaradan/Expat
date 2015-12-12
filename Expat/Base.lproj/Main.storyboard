@@ -107,7 +107,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mdl-xd-b6e">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mdl-xd-b6e">
                                 <rect key="frame" x="0.0" y="111" width="600" height="202"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sevilla" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="33m-ml-ECu">
@@ -119,8 +119,8 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bWe-g8-KuY">
-                                <rect key="frame" x="20" y="338" width="560" height="52"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Description" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="bWe-g8-KuY">
+                                <rect key="frame" x="14" y="339" width="560" height="68"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="cMi-CT-KFd"/>
                                 </constraints>
@@ -131,16 +131,16 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="bWe-g8-KuY" firstAttribute="top" secondItem="mdl-xd-b6e" secondAttribute="bottom" constant="25" id="FfW-Gx-6p7"/>
-                            <constraint firstItem="mdl-xd-b6e" firstAttribute="leading" secondItem="OOd-oK-eKE" secondAttribute="leading" id="IlF-Lo-9WD"/>
-                            <constraint firstItem="mdl-xd-b6e" firstAttribute="top" secondItem="33m-ml-ECu" secondAttribute="bottom" constant="8" symbolic="YES" id="QTO-Fc-pdY"/>
-                            <constraint firstItem="0aX-Kn-a4E" firstAttribute="top" secondItem="bWe-g8-KuY" secondAttribute="bottom" constant="210" id="Qs0-VO-0Aa"/>
-                            <constraint firstItem="33m-ml-ECu" firstAttribute="top" secondItem="kQP-mN-e5M" secondAttribute="bottom" constant="18" id="ZuT-Ag-adH"/>
-                            <constraint firstItem="33m-ml-ECu" firstAttribute="centerX" secondItem="mdl-xd-b6e" secondAttribute="centerX" id="eWh-Tn-HPG"/>
-                            <constraint firstItem="bWe-g8-KuY" firstAttribute="leading" secondItem="OOd-oK-eKE" secondAttribute="leadingMargin" id="hAC-qo-XNk"/>
-                            <constraint firstItem="bWe-g8-KuY" firstAttribute="leading" secondItem="33m-ml-ECu" secondAttribute="leading" id="l0d-ZR-hh1"/>
-                            <constraint firstAttribute="trailing" secondItem="mdl-xd-b6e" secondAttribute="trailing" id="uCT-bJ-wfk"/>
-                            <constraint firstItem="bWe-g8-KuY" firstAttribute="trailing" secondItem="33m-ml-ECu" secondAttribute="trailing" id="vxR-Oa-9oP"/>
+                            <constraint firstAttribute="trailing" secondItem="mdl-xd-b6e" secondAttribute="trailing" id="4m5-DX-KAl"/>
+                            <constraint firstItem="mdl-xd-b6e" firstAttribute="top" secondItem="33m-ml-ECu" secondAttribute="bottom" constant="8" symbolic="YES" id="6aP-cy-ays"/>
+                            <constraint firstItem="33m-ml-ECu" firstAttribute="centerX" secondItem="mdl-xd-b6e" secondAttribute="centerX" id="Fra-Fd-eGJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bWe-g8-KuY" secondAttribute="trailing" constant="6" id="HYs-i2-yBt"/>
+                            <constraint firstItem="33m-ml-ECu" firstAttribute="leading" secondItem="OOd-oK-eKE" secondAttribute="leadingMargin" id="JbT-7u-hKI"/>
+                            <constraint firstItem="bWe-g8-KuY" firstAttribute="top" secondItem="mdl-xd-b6e" secondAttribute="bottom" constant="26" id="OSU-A2-Dup"/>
+                            <constraint firstItem="bWe-g8-KuY" firstAttribute="leading" secondItem="OOd-oK-eKE" secondAttribute="leadingMargin" constant="-6" id="Qkh-R7-WFq"/>
+                            <constraint firstItem="mdl-xd-b6e" firstAttribute="leading" secondItem="OOd-oK-eKE" secondAttribute="leading" id="TRL-uo-avF"/>
+                            <constraint firstItem="0aX-Kn-a4E" firstAttribute="top" secondItem="bWe-g8-KuY" secondAttribute="bottom" constant="193" id="kPV-Db-wTv"/>
+                            <constraint firstItem="33m-ml-ECu" firstAttribute="top" secondItem="kQP-mN-e5M" secondAttribute="bottom" constant="18" id="qHh-6B-sZm"/>
                         </constraints>
                     </view>
                     <connections>

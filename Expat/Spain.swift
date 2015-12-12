@@ -10,7 +10,7 @@ import Foundation
 
 struct Spain {
     
-    static var Sevilla = City(theName: "Sevilla", theDescription: "Where Spanish culture and Muslim architecture intersect")
+    static var Sevilla = City(theName: "Sevilla", theDescription: "Spanish culture meets Muslim architecture")
     
     static var Huelva = City(theName: "Huelva", theDescription: "Where Sevillans spend the summer")
     

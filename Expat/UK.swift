@@ -12,11 +12,14 @@ struct UK {
     
     static var London = City(theName: "London", theDescription: "Home of Big Ben and some other things")
     
+    static var Manchester = City(theName: "Manchester", theDescription: "Polluted factories and unhappy caffeinated people")
+    
     static var cities: [City] {
         
         var cityArray = [City]()
         
         cityArray.append(London)
+        cityArray.append(Manchester)
         
         return cityArray
     }
