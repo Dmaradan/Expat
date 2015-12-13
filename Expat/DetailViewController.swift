@@ -45,7 +45,7 @@ class DetailViewController: UIViewController {
             string1 += "es/api?action=" + appDelegate.action + "&encoding=json&place_name=" + city!.name
         }
         else if appDelegate.countryCode == "UK" {
-            string1 += "uk/api?action=" + appDelegate.action + "&encoding=json&place_name=" + city!.name
+            string1 += "co.uk/api?action=" + appDelegate.action + "&encoding=json&place_name=" + city!.name
         }
         
         let string2 = "&bedroom_max=" + (String)(appDelegate.rooms) + "&pretty=1"
