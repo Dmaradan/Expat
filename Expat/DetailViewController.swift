@@ -15,7 +15,8 @@ class DetailViewController: UIViewController {
     let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     
     var city: City?
-    
+	   var averagePrice: String?
+	
     // MARK: Outlets
     
     @IBOutlet weak var name: UILabel!
@@ -67,7 +68,7 @@ class DetailViewController: UIViewController {
         let task = session.dataTaskWithRequest(request) { data, response, error in
             if let response = response, data = data {
                 print(response)
-                print(String(data: data, encoding: NSUTF8StringEncoding))
+                
             } else {
                 print(error)
             }
@@ -84,30 +85,33 @@ class DetailViewController: UIViewController {
                 print("Could not parse the data as JSON: '\(data)'")
                 return
             }
-            
-            //        /* GUARD: Is the "uuid" key in parsedResult? */
-            //        guard let uuid = parsedResult["uuid"] as? String else {
-            //            print("Cannot find key 'uuid' in \(parsedResult)")
-            //            return
-            //        }
-            //
-            //        /* Use the Data */
-            //
-            //        self.appDelegate.uuid = uuid
+									
+	
+                    /* Use the Data */
+									
+									let recent_month = (parsedResult["response"]!!["most_recent_month"]) as! String
+									
+									/* Go to the array index that corresponds to '2 bedroom rent monthly' */
+									let two_bed_rent_monthly = parsedResult["response"]!!["metadata"]!![2]
+									
+									
+									
+									/* Go to the latest month and average price */
+									print(two_bed_rent_monthly["data"]!!["\(recent_month)"]!!["avg_price"])
+									var myString = (two_bed_rent_monthly["data"]!!["\(recent_month)"]!!["avg_price"]) as! String
+									
+									/* Set the average price */
+									let averagePrice = NSNumberFormatter().numberFromString(myString)?.doubleValue
+									self.appDelegate.averagePrice = averagePrice
+									
+									
+									
+									/* Try to find my soul again */
+
         }
         
         task.resume()
-        
-        
-        
 
-
-        
     }
-
-   
-    
-
-    
-
+	
 }

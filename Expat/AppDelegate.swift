@@ -15,15 +15,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     /* Constants for API */
     
     var baseURLString = "http://api.nestoria."
-    var action = "search_listings"
+    var action = "metadata"
     var encoding = "json"
     var countryCode: String?
     
-    /* Location argument (&place_name) */
-    //var city : String?
     
     /* Filter (&bedroom_max) */
     var rooms = 2
+    
+    /* Average Price */
+    var averagePrice: Double?
+    
     
     
 
