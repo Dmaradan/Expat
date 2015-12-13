@@ -10,6 +10,8 @@ import UIKit
 
 class CountryTableViewController: UITableViewController {
     
+    let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+    
     var countries = ["Spain", "UK"]
 
     override func viewDidLoad() {
@@ -49,7 +51,9 @@ class CountryTableViewController: UITableViewController {
         
         if let selectedCountryCell = sender as? CountryTableViewCell {
             
-            cityVC?.countryCode = selectedCountryCell.nameLabel.text
+        cityVC?.countryCode = selectedCountryCell.nameLabel.text
+        appDelegate.countryCode = selectedCountryCell.nameLabel.text
+            
         }
         
     }

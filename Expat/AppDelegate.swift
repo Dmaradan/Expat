@@ -14,12 +14,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     /* Constants for API */
     
-    var baseURLString = "http://api.nestoria.es/api?"
+    var baseURLString = "http://api.nestoria."
     var action = "search_listings"
     var encoding = "json"
+    var countryCode: String?
     
     /* Location argument (&place_name) */
-    var city : String?
+    //var city : String?
     
     /* Filter (&bedroom_max) */
     var rooms = 2

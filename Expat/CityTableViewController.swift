@@ -9,7 +9,7 @@
 import UIKit
 
 class CityTableViewController: UITableViewController {
-
+    
     var countryCode: String?
     //var spanishCities = ["Sevilla"]
     //var country: NSObject?
@@ -57,6 +57,74 @@ class CityTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+        
+//        // MARK: API Call
+//        
+//        /* Build the URL */
+//        
+//        var string1 = appDelegate.baseURLString
+//        
+//        if countryCode == "Spain" {
+//            string1 += "en/api?action=" + appDelegate.action + "&encoding=json&place_name=" + Spain.cities[indexPath.row].name
+//        }
+//        else if countryCode == "UK" {
+//            string1 += "uk/api?action=" + appDelegate.action + "&encoding=json&place_name=" + UK.cities[indexPath.row].name
+//        }
+//        
+//        let string2 = "&bedroom_max=" + (String)(appDelegate.rooms)
+//        
+//        let url = NSURL(string: string1 + string2)
+//        
+//        
+//        /* Build the Request */
+//        
+//            let request = NSMutableURLRequest(URL: url!)
+//            request.HTTPMethod = "GET"
+//        
+//        
+//        /* Set the Session */
+//        
+//            let session = NSURLSession.sharedSession()
+//        
+//        /* Make the Request */
+//        
+//            let task = session.dataTaskWithRequest(request) { data, response, error in
+//                if let response = response, data = data {
+//                    print(response)
+//                    print(String(data: data, encoding: NSUTF8StringEncoding))
+//                } else {
+//                    print(error)
+//                }
+//        
+//        
+//                /* Parse the Data */
+//        
+//                let parsedResult: AnyObject!
+//                do {
+//                    parsedResult = try NSJSONSerialization.JSONObjectWithData(data!, options: .AllowFragments) as! NSDictionary
+//                    
+//                } catch {
+//                    parsedResult = nil
+//                    print("Could not parse the data as JSON: '\(data)'")
+//                    return
+//                }
+//        
+//        //        /* GUARD: Is the "uuid" key in parsedResult? */
+//        //        guard let uuid = parsedResult["uuid"] as? String else {
+//        //            print("Cannot find key 'uuid' in \(parsedResult)")
+//        //            return
+//        //        }
+//        //        
+//        //        /* Use the Data */
+//        //        
+//        //        self.appDelegate.uuid = uuid
+//            }
+//            
+//            task.resume()
+//            
+//
+//        
+        /* Perform the segue to detail view */
         performSegueWithIdentifier("showDetail", sender: self)
     }
     
