@@ -128,6 +128,12 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Average Monthly Rent for Two-Bedroom Property:   Calculating..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="TzZ-Ol-hVg">
+                                <rect key="frame" x="14" y="547" width="566" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -135,15 +141,20 @@
                             <constraint firstItem="mdl-xd-b6e" firstAttribute="top" secondItem="33m-ml-ECu" secondAttribute="bottom" constant="8" symbolic="YES" id="6aP-cy-ays"/>
                             <constraint firstItem="33m-ml-ECu" firstAttribute="centerX" secondItem="mdl-xd-b6e" secondAttribute="centerX" id="Fra-Fd-eGJ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="bWe-g8-KuY" secondAttribute="trailing" constant="6" id="HYs-i2-yBt"/>
+                            <constraint firstItem="0aX-Kn-a4E" firstAttribute="top" secondItem="TzZ-Ol-hVg" secondAttribute="bottom" constant="32" id="I6x-hd-a3M"/>
                             <constraint firstItem="33m-ml-ECu" firstAttribute="leading" secondItem="OOd-oK-eKE" secondAttribute="leadingMargin" id="JbT-7u-hKI"/>
+                            <constraint firstItem="TzZ-Ol-hVg" firstAttribute="centerX" secondItem="OOd-oK-eKE" secondAttribute="centerX" id="LS5-2i-Qgd"/>
+                            <constraint firstItem="TzZ-Ol-hVg" firstAttribute="leading" secondItem="OOd-oK-eKE" secondAttribute="leadingMargin" constant="-6" id="LnY-RG-grw"/>
                             <constraint firstItem="bWe-g8-KuY" firstAttribute="top" secondItem="mdl-xd-b6e" secondAttribute="bottom" constant="26" id="OSU-A2-Dup"/>
                             <constraint firstItem="bWe-g8-KuY" firstAttribute="leading" secondItem="OOd-oK-eKE" secondAttribute="leadingMargin" constant="-6" id="Qkh-R7-WFq"/>
                             <constraint firstItem="mdl-xd-b6e" firstAttribute="leading" secondItem="OOd-oK-eKE" secondAttribute="leading" id="TRL-uo-avF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="TzZ-Ol-hVg" secondAttribute="trailing" id="hlH-QE-UMK"/>
                             <constraint firstItem="0aX-Kn-a4E" firstAttribute="top" secondItem="bWe-g8-KuY" secondAttribute="bottom" constant="193" id="kPV-Db-wTv"/>
                             <constraint firstItem="33m-ml-ECu" firstAttribute="top" secondItem="kQP-mN-e5M" secondAttribute="bottom" constant="18" id="qHh-6B-sZm"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="averagePriceLabel" destination="TzZ-Ol-hVg" id="3Li-Yw-L3L"/>
                         <outlet property="image" destination="mdl-xd-b6e" id="kc9-hd-jPA"/>
                         <outlet property="name" destination="33m-ml-ECu" id="V6I-y0-C8z"/>
                         <outlet property="shortDescription" destination="bWe-g8-KuY" id="LrM-dj-xfr"/>

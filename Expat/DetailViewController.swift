@@ -26,6 +26,7 @@ class DetailViewController: UIViewController {
     
     @IBOutlet weak var shortDescription: UILabel!
     
+    @IBOutlet weak var averagePriceLabel: UILabel!
     
 
     override func viewDidLoad() {
@@ -98,13 +99,16 @@ class DetailViewController: UIViewController {
 									
 									/* Go to the latest month and average price */
 									print(two_bed_rent_monthly["data"]!!["\(recent_month)"]!!["avg_price"])
-									var myString = (two_bed_rent_monthly["data"]!!["\(recent_month)"]!!["avg_price"]) as! String
+									let myString = (two_bed_rent_monthly["data"]!!["\(recent_month)"]!!["avg_price"]) as! String
 									
 									/* Set the average price */
 									let averagePrice = NSNumberFormatter().numberFromString(myString)?.doubleValue
+									
+									self.averagePriceLabel.text = "Average Monthly Rent for Two-Bedroom Property: " + String(averagePrice)
+									
 									self.appDelegate.averagePrice = averagePrice
 									
-									
+
 									
 									/* Try to find my soul again */
 
