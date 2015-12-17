@@ -98,12 +98,6 @@ class DetailViewController: UIViewController {
                 return
         }
 									
-        /* GUARD: Is the 'most_recent_month' key in theResponse? */
-        guard let recent_month = theResponse["most_recent_month"] as? String else {
-                print("The key 'most_recent_month' was not found in \(theResponse)")
-                return
-        }
-									
         /* GUARD: Is the 'metadata' key in theResponse? */
         guard let metadata = theResponse["metadata"] as? NSArray else {
                 print("the key 'metadata' was not found in \(theResponse)")
@@ -112,14 +106,19 @@ class DetailViewController: UIViewController {
 									
 									
         let two_bed_rent_monthly = metadata[2]
-									
-									
+															
 									
         /* Go to the latest month and average price */
 									
         /* GUARD: is the 'data' key in two_bed_rent_monthly? */
         guard let theData = two_bed_rent_monthly["data"] as? NSDictionary else {
                 print("The key 'data' was not found in \(two_bed_rent_monthly)")
+                return
+        }
+            
+        /* GUARD: Is the 'most_recent_month' key in theResponse? */
+        guard let recent_month = theResponse["most_recent_month"] as? String else {
+                print("The key 'most_recent_month' was not found in \(theResponse)")
                 return
         }
 									
