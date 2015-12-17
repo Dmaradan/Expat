@@ -33,7 +33,7 @@
 		CA77E0271C17A858000AFD89 /* CityTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityTableViewController.swift; sourceTree = "<group>"; };
 		CA77E02A1C17A951000AFD89 /* CountryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryTableViewCell.swift; sourceTree = "<group>"; };
 		CA77E02C1C17A96A000AFD89 /* CityTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityTableViewCell.swift; sourceTree = "<group>"; };
-		CAD9490C1C1A123F005B461F /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 1; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; tabWidth = 1; usesTabs = 1; wrapsLines = 0; };
+		CAD9490C1C1A123F005B461F /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; wrapsLines = 0; };
 		CAD949101C1A1A2C005B461F /* Spain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spain.swift; sourceTree = "<group>"; };
 		CAD949141C1A2124005B461F /* UK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UK.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */

@@ -38,7 +38,7 @@ class DetailViewController: UIViewController {
         
                                       // MARK: API Call
         
-								/* Build the URL */
+		/* Build the URL */
         
         var string1 = appDelegate.baseURLString
         
@@ -54,13 +54,13 @@ class DetailViewController: UIViewController {
         let url = NSURL(string: string1 + string2)
         
         
-								/* Build the Request */
+		/* Build the Request */
         
         let request = NSMutableURLRequest(URL: url!)
         request.HTTPMethod = "GET"
         
         
-								/* Set the Session */
+		/* Set the Session */
         
         let session = NSURLSession.sharedSession()
         
@@ -88,65 +88,64 @@ class DetailViewController: UIViewController {
             }
 									
 	
-                                     // MARK: Use the Data 
+                                     // MARK: Use the Data
 									
-									/* Go to the array index that corresponds to '2 bedroom rent monthly' */
+		/* Go to the array index that corresponds to '2 bedroom rent monthly' */
 									
-									/* GUARD: Is the 'response' key in parsedResult? */
+		/* GUARD: Is the 'response' key in parsedResult? */
          guard let theResponse = parsedResult["response"] as? NSDictionary else {
-										    print("The key 'response' was not found in \(parsedResult)")
-										    return
-									}
+                print("The key 'response' was not found in \(parsedResult)")
+                return
+        }
 									
-									/* GUARD: Is the 'most_recent_month' key in theResponse? */
-									guard let recent_month = theResponse["most_recent_month"] as? String else {
-										    print("The key 'most_recent_month' was not found in \(theResponse)")
-										    return
-									}
+        /* GUARD: Is the 'most_recent_month' key in theResponse? */
+        guard let recent_month = theResponse["most_recent_month"] as? String else {
+                print("The key 'most_recent_month' was not found in \(theResponse)")
+                return
+        }
 									
-									/* GUARD: Is the 'metadata' key in theResponse? */
-									guard let metadata = theResponse["metadata"] as? NSArray else {
-										    print("the key 'metadata' was not found in \(theResponse)")
-										    return
-									}
-									
-									
-									let two_bed_rent_monthly = metadata[2]
+        /* GUARD: Is the 'metadata' key in theResponse? */
+        guard let metadata = theResponse["metadata"] as? NSArray else {
+                print("the key 'metadata' was not found in \(theResponse)")
+                return
+        }
 									
 									
+        let two_bed_rent_monthly = metadata[2]
 									
-									/* Go to the latest month and average price */
 									
-									/* GUARD: is the 'data' key in two_bed_rent_monthly? */
-									guard let theData = two_bed_rent_monthly["data"] as? NSDictionary else {
-										    print("The key 'data' was not found in \(two_bed_rent_monthly)")
-										    return
-									}
 									
-									/* GUARD: is the most recent month a key in theData? */
-									guard let monthlyData = theData["\(recent_month)"] as? NSDictionary else {
-										    print("The key \(recent_month) was not found in \(theData)")
-										    return
-									}
+        /* Go to the latest month and average price */
 									
-									/* GUARD: is the key 'avg_price' in monthlyData? */
-									guard let theAveragePrice = monthlyData["avg_price"] as? String else {
-										    print("The key 'avg_price' was not found in \(monthlyData)")
-										    return
-									}
+        /* GUARD: is the 'data' key in two_bed_rent_monthly? */
+        guard let theData = two_bed_rent_monthly["data"] as? NSDictionary else {
+                print("The key 'data' was not found in \(two_bed_rent_monthly)")
+                return
+        }
+									
+        /* GUARD: is the most recent month a key in theData? */
+        guard let monthlyData = theData["\(recent_month)"] as? NSDictionary else {
+                print("The key \(recent_month) was not found in \(theData)")
+                return
+        }
+									
+        /* GUARD: is the key 'avg_price' in monthlyData? */
+        guard let theAveragePrice = monthlyData["avg_price"] as? String else {
+                print("The key 'avg_price' was not found in \(monthlyData)")
+                return
+        }
 
-									/* Set the average price */
+        /* Set the average price */
 									
-									self.averagePriceLabel.text = "Average Monthly Rent for Two-Bedroom Property: " + theAveragePrice
+        self.averagePriceLabel.text = "Average Monthly Rent for Two-Bedroom Property: " + theAveragePrice
 									
-									let averagePrice = NSNumberFormatter().numberFromString(theAveragePrice)?.doubleValue
+        let averagePrice = NSNumberFormatter().numberFromString(theAveragePrice)?.doubleValue
 									
-									self.appDelegate.averagePrice = averagePrice
+        self.appDelegate.averagePrice = averagePrice
 									
         }
         
         task.resume()
-
     }
 	
 }
