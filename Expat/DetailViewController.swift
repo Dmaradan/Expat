@@ -10,14 +10,14 @@ import UIKit
 
 class DetailViewController: UIViewController {
     
-                                    // MARK: Config
+    // MARK: Config
     
     let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     
     var city: City?
-	   var averagePrice: String?
+    var averagePrice: String?
 	
-                                     // MARK: Outlets
+    // MARK: Outlets
     
     @IBOutlet weak var name: UILabel!
     
@@ -36,9 +36,9 @@ class DetailViewController: UIViewController {
         image.image = city?.image
         shortDescription.text = city?.description
         
-                                      // MARK: API Call
+        // MARK: API Call
         
-		/* Build the URL */
+        /* Build the URL */
         
         var string1 = appDelegate.baseURLString
         
@@ -54,13 +54,13 @@ class DetailViewController: UIViewController {
         let url = NSURL(string: string1 + string2)
         
         
-		/* Build the Request */
+        /* Build the Request */
         
         let request = NSMutableURLRequest(URL: url!)
         request.HTTPMethod = "GET"
         
         
-		/* Set the Session */
+        /* Set the Session */
         
         let session = NSURLSession.sharedSession()
         
@@ -88,12 +88,12 @@ class DetailViewController: UIViewController {
             }
 									
 	
-                                     // MARK: Use the Data
+        // MARK: Use the Data
 									
-		/* Go to the array index that corresponds to '2 bedroom rent monthly' */
+        /* Go to the array index that corresponds to '2 bedroom rent monthly' */
 									
-		/* GUARD: Is the 'response' key in parsedResult? */
-         guard let theResponse = parsedResult["response"] as? NSDictionary else {
+        /* GUARD: Is the 'response' key in parsedResult? */
+        guard let theResponse = parsedResult["response"] as? NSDictionary else {
                 print("The key 'response' was not found in \(parsedResult)")
                 return
         }
