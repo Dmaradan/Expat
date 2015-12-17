@@ -136,7 +136,7 @@ class DetailViewController: UIViewController {
 
         /* Set the average price */
 									
-        self.averagePriceLabel.text = "Average Monthly Rent for Two-Bedroom Property: " + theAveragePrice
+        self.averagePriceLabel.text = theAveragePrice
 									
         let averagePrice = NSNumberFormatter().numberFromString(theAveragePrice)?.doubleValue
 									
