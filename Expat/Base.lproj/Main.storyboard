@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="SGf-A3-bh6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="SGf-A3-bh6">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -152,7 +152,6 @@
                             <constraint firstAttribute="trailingMargin" secondItem="bWe-g8-KuY" secondAttribute="trailing" constant="6" id="HYs-i2-yBt"/>
                             <constraint firstItem="0aX-Kn-a4E" firstAttribute="top" secondItem="TzZ-Ol-hVg" secondAttribute="bottom" constant="32" id="I6x-hd-a3M"/>
                             <constraint firstItem="33m-ml-ECu" firstAttribute="leading" secondItem="OOd-oK-eKE" secondAttribute="leadingMargin" id="JbT-7u-hKI"/>
-                            <constraint firstItem="TzZ-Ol-hVg" firstAttribute="centerX" secondItem="OOd-oK-eKE" secondAttribute="centerX" id="LS5-2i-Qgd"/>
                             <constraint firstItem="TzZ-Ol-hVg" firstAttribute="leading" secondItem="OOd-oK-eKE" secondAttribute="leadingMargin" constant="-6" id="LnY-RG-grw"/>
                             <constraint firstItem="bWe-g8-KuY" firstAttribute="top" secondItem="mdl-xd-b6e" secondAttribute="bottom" constant="26" id="OSU-A2-Dup"/>
                             <constraint firstItem="bWe-g8-KuY" firstAttribute="leading" secondItem="OOd-oK-eKE" secondAttribute="leadingMargin" constant="-6" id="Qkh-R7-WFq"/>

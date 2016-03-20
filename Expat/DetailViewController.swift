@@ -135,8 +135,10 @@ class DetailViewController: UIViewController {
         }
 
         /* Set the average price */
-									
-        self.averagePriceLabel.text = theAveragePrice
+        dispatch_async(dispatch_get_main_queue(), {
+            self.averagePriceLabel.text = theAveragePrice
+        })
+        
 									
         let averagePrice = NSNumberFormatter().numberFromString(theAveragePrice)?.doubleValue
 									

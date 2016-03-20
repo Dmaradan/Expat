@@ -11,18 +11,13 @@ import UIKit
 class CityTableViewController: UITableViewController {
     
     var countryCode: String?
-    //var spanishCities = ["Sevilla"]
-    //var country: NSObject?
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
 
     // MARK: - Table view data source
 
