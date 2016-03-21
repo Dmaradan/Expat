@@ -159,6 +159,11 @@ class DetailViewController: UIViewController {
     
     @IBAction func viewListings(sender: UIButton) {
         
+        /* Figure out the price range */
+        
+        let minimumPrice = self.appDelegate.averagePrice! - 50.0
+        let maximumPrice = self.appDelegate.averagePrice! + 50.0
+        
         /* Build the URL */
         
         var string1 = appDelegate.baseURLString
@@ -172,7 +177,11 @@ class DetailViewController: UIViewController {
         
         let string2 = "&bedroom_max=" + (String)(appDelegate.rooms) + "&pretty=1"
         
-        let url = NSURL(string: string1 + string2)
+        let string3 = "&listing_type=\(appDelegate.type)&price_min=\(minimumPrice)&price_max=\(maximumPrice)"
+        
+        
+        
+        let url = NSURL(string: string1 + string2 + string3)
         
         
         /* Build the Request */
@@ -205,6 +214,8 @@ class DetailViewController: UIViewController {
                 print("Could not parse the data as JSON: '\(data)'")
                 return
             }
+            
+            print(parsedResult)
             
             
             // MARK: Use the Data

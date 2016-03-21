@@ -16,6 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var baseURLString = "http://api.nestoria."
     var action = "metadata"
+    var type = "rent"
     var encoding = "json"
     var countryCode: String?
     
