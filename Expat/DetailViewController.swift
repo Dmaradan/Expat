@@ -16,6 +16,7 @@ class DetailViewController: UIViewController {
     
     var city: City?
     var averagePrice: String?
+    
 	
     // MARK: Outlets
     
@@ -220,7 +221,11 @@ class DetailViewController: UIViewController {
             
             // MARK: Use the Data
             
-        
+            // MARK: Segue to Listings View
+            dispatch_async(dispatch_get_main_queue(), {
+                self.performSegueWithIdentifier("Listings", sender: self)
+            })
+            
             
         }
         

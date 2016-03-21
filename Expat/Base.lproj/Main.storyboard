@@ -185,11 +185,30 @@
                         <outlet property="listingsButton" destination="Yz8-gM-N5G" id="XW8-s7-fUp"/>
                         <outlet property="name" destination="33m-ml-ECu" id="V6I-y0-C8z"/>
                         <outlet property="shortDescription" destination="bWe-g8-KuY" id="LrM-dj-xfr"/>
+                        <segue destination="eS7-ft-J6m" kind="show" identifier="Listings" id="euk-vp-1kP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nSP-jx-nbM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2675" y="335"/>
+        </scene>
+        <!--Listings View Controller-->
+        <scene sceneID="RCE-UO-mCu">
+            <objects>
+                <viewController id="eS7-ft-J6m" customClass="ListingsViewController" customModule="Expat" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="o7r-8a-Hig"/>
+                        <viewControllerLayoutGuide type="bottom" id="Up2-eJ-0zn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hoq-0r-dz2">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iWe-j7-dN9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2675" y="1034"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="L2k-Lz-ZzG">

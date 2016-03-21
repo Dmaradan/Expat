@@ -16,6 +16,8 @@
 		CA77E0281C17A858000AFD89 /* CityTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA77E0271C17A858000AFD89 /* CityTableViewController.swift */; };
 		CA77E02B1C17A951000AFD89 /* CountryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA77E02A1C17A951000AFD89 /* CountryTableViewCell.swift */; };
 		CA77E02D1C17A96A000AFD89 /* CityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA77E02C1C17A96A000AFD89 /* CityTableViewCell.swift */; };
+		CA8742791C9F7AD000B31036 /* ListingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8742781C9F7AD000B31036 /* ListingsViewController.swift */; };
+		CA87427B1C9F7E6500B31036 /* Listing.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA87427A1C9F7E6500B31036 /* Listing.swift */; };
 		CAD9490D1C1A123F005B461F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD9490C1C1A123F005B461F /* DetailViewController.swift */; };
 		CAD949111C1A1A2C005B461F /* Spain.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD949101C1A1A2C005B461F /* Spain.swift */; };
 		CAD949151C1A2124005B461F /* UK.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD949141C1A2124005B461F /* UK.swift */; };
@@ -33,6 +35,8 @@
 		CA77E0271C17A858000AFD89 /* CityTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityTableViewController.swift; sourceTree = "<group>"; };
 		CA77E02A1C17A951000AFD89 /* CountryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryTableViewCell.swift; sourceTree = "<group>"; };
 		CA77E02C1C17A96A000AFD89 /* CityTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityTableViewCell.swift; sourceTree = "<group>"; };
+		CA8742781C9F7AD000B31036 /* ListingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListingsViewController.swift; sourceTree = "<group>"; };
+		CA87427A1C9F7E6500B31036 /* Listing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Listing.swift; sourceTree = "<group>"; };
 		CAD9490C1C1A123F005B461F /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; wrapsLines = 0; };
 		CAD949101C1A1A2C005B461F /* Spain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spain.swift; sourceTree = "<group>"; };
 		CAD949141C1A2124005B461F /* UK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UK.swift; sourceTree = "<group>"; };
@@ -86,6 +90,7 @@
 				CA77E01D1C17A755000AFD89 /* City.swift */,
 				CAD949101C1A1A2C005B461F /* Spain.swift */,
 				CAD949141C1A2124005B461F /* UK.swift */,
+				CA87427A1C9F7E6500B31036 /* Listing.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -96,6 +101,7 @@
 				CA77E0251C17A845000AFD89 /* CountryTableViewController.swift */,
 				CA77E0271C17A858000AFD89 /* CityTableViewController.swift */,
 				CAD9490C1C1A123F005B461F /* DetailViewController.swift */,
+				CA8742781C9F7AD000B31036 /* ListingsViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -183,12 +189,14 @@
 				CA77E02D1C17A96A000AFD89 /* CityTableViewCell.swift in Sources */,
 				CAD949111C1A1A2C005B461F /* Spain.swift in Sources */,
 				CAD949151C1A2124005B461F /* UK.swift in Sources */,
+				CA87427B1C9F7E6500B31036 /* Listing.swift in Sources */,
 				CA77E0281C17A858000AFD89 /* CityTableViewController.swift in Sources */,
 				CA77DFC11C0E6051000AFD89 /* AppDelegate.swift in Sources */,
 				CA77E01E1C17A755000AFD89 /* City.swift in Sources */,
 				CA77E0261C17A845000AFD89 /* CountryTableViewController.swift in Sources */,
 				CA77E02B1C17A951000AFD89 /* CountryTableViewCell.swift in Sources */,
 				CAD9490D1C1A123F005B461F /* DetailViewController.swift in Sources */,
+				CA8742791C9F7AD000B31036 /* ListingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
