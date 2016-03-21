@@ -10,15 +10,15 @@ import UIKit
 
 class Listing: NSObject {
     
-    var name: String
-    var price: String
-    var image: UIImage
+    var name: NSString
+    var price: Int
+    var imageURL: NSString
     
-    init(theName: String, thePrice: String, theImage: UIImage) {
+    init(theName: NSString, thePrice: Int, theImage: NSString) {
         
         name = theName
         price = thePrice
-        image = theImage
+        imageURL = theImage
         
     }
 

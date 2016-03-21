@@ -16,6 +16,7 @@ class DetailViewController: UIViewController {
     
     var city: City?
     var averagePrice: String?
+    var listings: [Listing] = []
     
 	
     // MARK: Outlets
@@ -199,7 +200,7 @@ class DetailViewController: UIViewController {
         
         let task = session.dataTaskWithRequest(request) { data, response, error in
             if let response = response, data = data {
-                print(response)
+                //print(response)
                 
             } else {
                 print(error)
@@ -216,10 +217,54 @@ class DetailViewController: UIViewController {
                 return
             }
             
-            print(parsedResult)
             
             
-            // MARK: Use the Data
+            guard let theResponse = parsedResult["response"] as? NSDictionary else {
+                print("the key 'response' was not found in \(parsedResult)")
+                return
+            }
+//            print("")
+//            print("start of response")
+//            print(theResponse)
+//            print("")
+            
+            guard let theListings = theResponse["listings"] as? NSArray else {
+                print("the key 'listings' was not found in \(theResponse)")
+                return
+            }
+            print("")
+            print("start of listings")
+            print(theListings)
+            print("")
+            
+            
+            // MARK: Iterate through theListings array and instantiate first three Listings with data
+            
+            var i = 0
+            while(i < 3) {
+                let currentListing = theListings[i] as? NSDictionary
+                
+                guard let theTitle = currentListing!["title"] as? NSString else {
+                    print("the key 'title' was not found in \(currentListing)")
+                    return
+                }
+                
+                guard let thePrice = currentListing!["price_high"] as? Int else {
+                    print("the key 'price_high' was not found in \(currentListing)")
+                    return
+                }
+                
+                guard let theImage = currentListing!["img_url"] as? NSString else {
+                    print("the key 'img_url' was not found in \(currentListing)")
+                    return
+                }
+                
+                self.listings.append(Listing(theName: theTitle, thePrice: thePrice, theImage: theImage))
+                
+                i++
+            }
+           
+           
             
             // MARK: Segue to Listings View
             dispatch_async(dispatch_get_main_queue(), {
