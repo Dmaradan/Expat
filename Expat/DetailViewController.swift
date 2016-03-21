@@ -28,6 +28,9 @@ class DetailViewController: UIViewController {
     
     @IBOutlet weak var averagePriceLabel: UILabel!
     
+    
+    @IBOutlet weak var listingsButton: UIButton!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +38,8 @@ class DetailViewController: UIViewController {
         name.text = city?.name
         image.image = city?.image
         shortDescription.text = city?.description
+        
+        listingsButton.enabled = false
         
         // MARK: API Call
         
@@ -134,9 +139,10 @@ class DetailViewController: UIViewController {
                 return
         }
 
-        /* Set the average price */
+        /* Set the average price and enable listings button */
         dispatch_async(dispatch_get_main_queue(), {
             self.averagePriceLabel.text = theAveragePrice
+            self.listingsButton.enabled = true
         })
         
 									
@@ -148,5 +154,65 @@ class DetailViewController: UIViewController {
         
         task.resume()
     }
-	
+    
+    // MARK: Button Actions
+    
+    @IBAction func viewListings(sender: UIButton) {
+        
+        /* Build the URL */
+        
+        var string1 = appDelegate.baseURLString
+        
+        if appDelegate.countryCode == "Spain" {
+            string1 += "es/api?action=" + "search_listings" + "&encoding=json&place_name=" + city!.name
+        }
+        else if appDelegate.countryCode == "UK" {
+            string1 += "co.uk/api?action=" + "search_listings" + "&encoding=json&place_name=" + city!.name
+        }
+        
+        let string2 = "&bedroom_max=" + (String)(appDelegate.rooms) + "&pretty=1"
+        
+        let url = NSURL(string: string1 + string2)
+        
+        
+        /* Build the Request */
+        
+        let request = NSMutableURLRequest(URL: url!)
+        request.HTTPMethod = "GET"
+        
+        
+        /* Set the Session */
+        
+        let session = NSURLSession.sharedSession()
+        
+        /* Make the Request */
+        
+        let task = session.dataTaskWithRequest(request) { data, response, error in
+            if let response = response, data = data {
+                print(response)
+                
+            } else {
+                print(error)
+            }
+            /* Parse the Data */
+            
+            let parsedResult: AnyObject!
+            do {
+                parsedResult = try NSJSONSerialization.JSONObjectWithData(data!, options: .AllowFragments) as! NSDictionary
+                
+            } catch {
+                parsedResult = nil
+                print("Could not parse the data as JSON: '\(data)'")
+                return
+            }
+            
+            
+            // MARK: Use the Data
+            
+        
+            
+        }
+        
+        task.resume()
+    }
 }
