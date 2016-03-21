@@ -276,4 +276,10 @@ class DetailViewController: UIViewController {
         
         task.resume()
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let destVC = segue.destinationViewController as! ListingsViewController
+        
+        destVC.listings = listings
+    }
 }

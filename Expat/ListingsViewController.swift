@@ -9,9 +9,13 @@
 import UIKit
 
 class ListingsViewController: UIViewController {
+    
+    var listings: [Listing]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print(listings)
 
         
     }
