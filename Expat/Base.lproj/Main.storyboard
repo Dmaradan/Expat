@@ -155,11 +155,16 @@
                                     <action selector="viewListings:" destination="cmb-RS-cku" eventType="touchUpInside" id="ron-mU-uIi"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="v0j-G1-2Gn">
+                                <rect key="frame" x="290" y="522" width="20" height="20"/>
+                                <color key="color" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="mdl-xd-b6e" secondAttribute="trailing" id="4m5-DX-KAl"/>
                             <constraint firstAttribute="leadingMargin" secondItem="lO4-dL-azz" secondAttribute="leading" id="5eb-mV-1KX"/>
+                            <constraint firstItem="Yz8-gM-N5G" firstAttribute="top" secondItem="v0j-G1-2Gn" secondAttribute="bottom" constant="8" symbolic="YES" id="5vt-Cr-GWt"/>
                             <constraint firstAttribute="bottom" secondItem="Yz8-gM-N5G" secondAttribute="bottom" constant="20" symbolic="YES" id="5xA-xA-H8u"/>
                             <constraint firstItem="mdl-xd-b6e" firstAttribute="top" secondItem="33m-ml-ECu" secondAttribute="bottom" constant="8" symbolic="YES" id="6aP-cy-ays"/>
                             <constraint firstItem="0aX-Kn-a4E" firstAttribute="top" secondItem="TzZ-Ol-hVg" secondAttribute="bottom" constant="93" id="FUz-6U-mZL"/>
@@ -171,6 +176,7 @@
                             <constraint firstItem="bWe-g8-KuY" firstAttribute="leading" secondItem="OOd-oK-eKE" secondAttribute="leadingMargin" constant="-6" id="Qkh-R7-WFq"/>
                             <constraint firstItem="TzZ-Ol-hVg" firstAttribute="leading" secondItem="bWe-g8-KuY" secondAttribute="leading" id="S6T-Te-qmE"/>
                             <constraint firstItem="mdl-xd-b6e" firstAttribute="leading" secondItem="OOd-oK-eKE" secondAttribute="leading" id="TRL-uo-avF"/>
+                            <constraint firstItem="v0j-G1-2Gn" firstAttribute="centerX" secondItem="lO4-dL-azz" secondAttribute="centerX" id="aci-xg-bjR"/>
                             <constraint firstItem="lO4-dL-azz" firstAttribute="centerX" secondItem="OOd-oK-eKE" secondAttribute="centerX" id="fGv-aH-BIv"/>
                             <constraint firstItem="TzZ-Ol-hVg" firstAttribute="top" secondItem="lO4-dL-azz" secondAttribute="bottom" constant="15" id="i22-XH-pRw"/>
                             <constraint firstItem="0aX-Kn-a4E" firstAttribute="top" secondItem="bWe-g8-KuY" secondAttribute="bottom" constant="193" id="kPV-Db-wTv"/>
@@ -180,12 +186,13 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="v0j-G1-2Gn" id="Dzq-Ql-662"/>
                         <outlet property="averagePriceLabel" destination="TzZ-Ol-hVg" id="3Li-Yw-L3L"/>
                         <outlet property="image" destination="mdl-xd-b6e" id="kc9-hd-jPA"/>
                         <outlet property="listingsButton" destination="Yz8-gM-N5G" id="XW8-s7-fUp"/>
                         <outlet property="name" destination="33m-ml-ECu" id="V6I-y0-C8z"/>
                         <outlet property="shortDescription" destination="bWe-g8-KuY" id="LrM-dj-xfr"/>
-                        <segue destination="oau-jH-c5t" kind="show" identifier="Listings" id="Y4P-sV-hKf"/>
+                        <segue destination="oau-jH-c5t" kind="show" identifier="Listings" id="ynx-nB-DLv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nSP-jx-nbM" userLabel="First Responder" sceneMemberID="firstResponder"/>

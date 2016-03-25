@@ -33,6 +33,9 @@ class DetailViewController: UIViewController {
     
     @IBOutlet weak var listingsButton: UIButton!
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -161,6 +164,9 @@ class DetailViewController: UIViewController {
     
     @IBAction func viewListings(sender: UIButton) {
         
+        /* Start an Activity Indicator while data is fetched */
+        activityIndicator.startAnimating()
+        
         /* Figure out the price range */
         
         let minimumPrice = self.appDelegate.averagePrice! - 50.0
@@ -259,14 +265,17 @@ class DetailViewController: UIViewController {
                     return
                 }
                 
-                let urlString = imageString as String
-                let url = NSURL(string: urlString)
-                let data = NSData(contentsOfURL: url!)
-                let theImage = UIImage(data: data!)
-
-                
-                self.listings.append(Listing(theName: theTitle, thePrice: thePrice, theImage: theImage!))
-                
+                /* Convert url strings to images and append */
+                dispatch_async(dispatch_get_main_queue(), {
+                    let urlString = imageString as String
+                    let url = NSURL(string: urlString)
+                    let data = NSData(contentsOfURL: url!)
+                    let theImage = UIImage(data: data!)
+                    
+                    self.listings.append(Listing(theName: theTitle, thePrice: thePrice, theImage: theImage!))
+                    
+                })
+              
                 i += 1
             }
            
@@ -274,6 +283,7 @@ class DetailViewController: UIViewController {
             
             // MARK: Segue to Listings View
             dispatch_async(dispatch_get_main_queue(), {
+                self.activityIndicator.stopAnimating()
                 self.performSegueWithIdentifier("Listings", sender: self)
             })
             
