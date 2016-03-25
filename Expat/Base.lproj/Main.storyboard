@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="SGf-A3-bh6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="SGf-A3-bh6">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -185,7 +185,7 @@
                         <outlet property="listingsButton" destination="Yz8-gM-N5G" id="XW8-s7-fUp"/>
                         <outlet property="name" destination="33m-ml-ECu" id="V6I-y0-C8z"/>
                         <outlet property="shortDescription" destination="bWe-g8-KuY" id="LrM-dj-xfr"/>
-                        <segue destination="eS7-ft-J6m" kind="show" identifier="Listings" id="euk-vp-1kP"/>
+                        <segue destination="oau-jH-c5t" kind="show" identifier="Listings" id="Y4P-sV-hKf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nSP-jx-nbM" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -195,7 +195,7 @@
         <!--Listings View Controller-->
         <scene sceneID="RCE-UO-mCu">
             <objects>
-                <viewController id="eS7-ft-J6m" customClass="ListingsViewController" customModule="Expat" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Listings View Controller" id="eS7-ft-J6m" customClass="ListingsViewController" customModule="Expat" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="o7r-8a-Hig"/>
                         <viewControllerLayoutGuide type="bottom" id="Up2-eJ-0zn"/>
@@ -321,6 +321,56 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iWe-j7-dN9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2675" y="1034"/>
+        </scene>
+        <!--Listings Table View Controller-->
+        <scene sceneID="v5g-1F-mUh">
+            <objects>
+                <tableViewController id="oau-jH-c5t" customClass="ListingsTableViewController" customModule="Expat" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="136" sectionHeaderHeight="28" sectionFooterHeight="28" id="JWD-rE-wKu">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Listing" rowHeight="136" id="1aW-00-HLu" customClass="ListingTableViewCell" customModule="Expat" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="136"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1aW-00-HLu" id="MBz-v4-seO">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="136"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x94-R9-mPw">
+                                            <rect key="frame" x="164" y="4" width="129" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Price" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZEM-SU-FRr">
+                                            <rect key="frame" x="164" y="80" width="129" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lJd-EJ-lN0">
+                                            <rect key="frame" x="8" y="0.0" width="135" height="128"/>
+                                        </imageView>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="name" destination="x94-R9-mPw" id="ej8-gi-Ph4"/>
+                                    <outlet property="picture" destination="lJd-EJ-lN0" id="0S6-E6-Xba"/>
+                                    <outlet property="price" destination="ZEM-SU-FRr" id="n9K-Iw-uMa"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="oau-jH-c5t" id="mwN-V6-VN7"/>
+                            <outlet property="delegate" destination="oau-jH-c5t" id="B2N-EB-iXR"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xZq-zz-7Xw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3341" y="1034"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="L2k-Lz-ZzG">

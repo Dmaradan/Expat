@@ -21,6 +21,8 @@
 		CAD9490D1C1A123F005B461F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD9490C1C1A123F005B461F /* DetailViewController.swift */; };
 		CAD949111C1A1A2C005B461F /* Spain.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD949101C1A1A2C005B461F /* Spain.swift */; };
 		CAD949151C1A2124005B461F /* UK.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD949141C1A2124005B461F /* UK.swift */; };
+		CAF01C331CA5E722008B658D /* ListingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF01C321CA5E722008B658D /* ListingsTableViewController.swift */; };
+		CAF01C351CA5E7A9008B658D /* ListingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF01C341CA5E7A9008B658D /* ListingTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		CAD9490C1C1A123F005B461F /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; wrapsLines = 0; };
 		CAD949101C1A1A2C005B461F /* Spain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spain.swift; sourceTree = "<group>"; };
 		CAD949141C1A2124005B461F /* UK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UK.swift; sourceTree = "<group>"; };
+		CAF01C321CA5E722008B658D /* ListingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListingsTableViewController.swift; sourceTree = "<group>"; };
+		CAF01C341CA5E7A9008B658D /* ListingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListingTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,7 @@
 				CA77E0271C17A858000AFD89 /* CityTableViewController.swift */,
 				CAD9490C1C1A123F005B461F /* DetailViewController.swift */,
 				CA8742781C9F7AD000B31036 /* ListingsViewController.swift */,
+				CAF01C321CA5E722008B658D /* ListingsTableViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -111,6 +116,7 @@
 			children = (
 				CA77E02A1C17A951000AFD89 /* CountryTableViewCell.swift */,
 				CA77E02C1C17A96A000AFD89 /* CityTableViewCell.swift */,
+				CAF01C341CA5E7A9008B658D /* ListingTableViewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -191,9 +197,11 @@
 				CAD949151C1A2124005B461F /* UK.swift in Sources */,
 				CA87427B1C9F7E6500B31036 /* Listing.swift in Sources */,
 				CA77E0281C17A858000AFD89 /* CityTableViewController.swift in Sources */,
+				CAF01C351CA5E7A9008B658D /* ListingTableViewCell.swift in Sources */,
 				CA77DFC11C0E6051000AFD89 /* AppDelegate.swift in Sources */,
 				CA77E01E1C17A755000AFD89 /* City.swift in Sources */,
 				CA77E0261C17A845000AFD89 /* CountryTableViewController.swift in Sources */,
+				CAF01C331CA5E722008B658D /* ListingsTableViewController.swift in Sources */,
 				CA77E02B1C17A951000AFD89 /* CountryTableViewCell.swift in Sources */,
 				CAD9490D1C1A123F005B461F /* DetailViewController.swift in Sources */,
 				CA8742791C9F7AD000B31036 /* ListingsViewController.swift in Sources */,

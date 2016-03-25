@@ -238,10 +238,10 @@ class DetailViewController: UIViewController {
             print("")
             
             
-            // MARK: Iterate through theListings array and instantiate first three Listings with data
+            // MARK: Iterate through theListings array and instantiate first twenty Listings with data
             
             var i = 0
-            while(i < 3) {
+            while(i < 20) {
                 let currentListing = theListings[i] as? NSDictionary
                 
                 guard let theTitle = currentListing!["title"] as? NSString else {
@@ -254,14 +254,20 @@ class DetailViewController: UIViewController {
                     return
                 }
                 
-                guard let theImage = currentListing!["img_url"] as? NSString else {
+                guard let imageString = currentListing!["img_url"] as? NSString else {
                     print("the key 'img_url' was not found in \(currentListing)")
                     return
                 }
                 
-                self.listings.append(Listing(theName: theTitle, thePrice: thePrice, theImage: theImage))
+                let urlString = imageString as String
+                let url = NSURL(string: urlString)
+                let data = NSData(contentsOfURL: url!)
+                let theImage = UIImage(data: data!)
+
                 
-                i++
+                self.listings.append(Listing(theName: theTitle, thePrice: thePrice, theImage: theImage!))
+                
+                i += 1
             }
            
            
@@ -278,7 +284,7 @@ class DetailViewController: UIViewController {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let destVC = segue.destinationViewController as! ListingsViewController
+        let destVC = segue.destinationViewController as! ListingsTableViewController
         
         destVC.listings = listings
     }

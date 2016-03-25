@@ -12,13 +12,13 @@ class Listing: NSObject {
     
     var name: NSString
     var price: Int
-    var imageURL: NSString
+    var picture: UIImage
     
-    init(theName: NSString, thePrice: Int, theImage: NSString) {
+    init(theName: NSString, thePrice: Int, theImage: UIImage) {
         
         name = theName
         price = thePrice
-        imageURL = theImage
+        picture = theImage
         
     }
 

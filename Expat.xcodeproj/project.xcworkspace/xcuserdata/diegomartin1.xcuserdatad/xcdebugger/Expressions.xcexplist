@@ -3,6 +3,22 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "ListingsTableViewController.init(coder : NSCoder) -&gt; ListingsTableViewController?:ListingsTableViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "listings">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ListingsTableViewController.listings.setter:ListingsTableViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "listings">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "ListingsViewController.init(coder : NSCoder) -&gt; ListingsViewController?:ListingsViewController.swift">
          <PersistentStrings>
             <PersistentString

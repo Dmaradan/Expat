@@ -50,24 +50,24 @@ class ListingsViewController: UIViewController {
         
         /* Populate the Images */
         
-        let urlOne = listings![0].imageURL as String
-        print("urlOne = " + urlOne)
-        let urlTwo = listings![1].imageURL as String
-        let urlThree = listings![2].imageURL as String
+//        let urlOne = listings![0].imageURL as String
+//        print("urlOne = " + urlOne)
+//        let urlTwo = listings![1].imageURL as String
+//        let urlThree = listings![2].imageURL as String
         
         
         
-        var url = NSURL(string: urlOne)
-        var data = NSData(contentsOfURL: url!)
-        listingOneImage.image = UIImage(data: data!)
-        
-        url = NSURL(string: urlTwo)
-        data = NSData(contentsOfURL: url!)
-        listingTwoImage.image = UIImage(data: data!)
-        
-        url = NSURL(string: urlThree)
-        data = NSData(contentsOfURL: url!)
-        listingThreeImage.image = UIImage(data: data!)
+//        var url = NSURL(string: urlOne)
+//        var data = NSData(contentsOfURL: url!)
+//        listingOneImage.image = UIImage(data: data!)
+//        
+//        url = NSURL(string: urlTwo)
+//        data = NSData(contentsOfURL: url!)
+//        listingTwoImage.image = UIImage(data: data!)
+//        
+//        url = NSURL(string: urlThree)
+//        data = NSData(contentsOfURL: url!)
+//        listingThreeImage.image = UIImage(data: data!)
         
         
     }
