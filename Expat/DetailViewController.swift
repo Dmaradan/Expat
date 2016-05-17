@@ -101,16 +101,35 @@ class DetailViewController: UIViewController {
         // MARK: Use the Data
 									
         /* Go to the array index that corresponds to '2 bedroom rent monthly' */
+            
+            print(parsedResult)
+            
+            
+        
+            
 									
         /* GUARD: Is the 'response' key in parsedResult? */
         guard let theResponse = parsedResult["response"] as? NSDictionary else {
                 print("The key 'response' was not found in \(parsedResult)")
                 return
         }
+            
+            /* IMPORTANT: IT LOOKS LIKE NESTORIA IS HAVING INTERNAL ISSUES WITH ITS API, SETTING DEFAULT VALUE
+             IN CASE OF FAILURE */
+            
+            self.appDelegate.averagePrice = 500.0
 									
         /* GUARD: Is the 'metadata' key in theResponse? */
         guard let metadata = theResponse["metadata"] as? NSArray else {
                 print("the key 'metadata' was not found in \(theResponse)")
+            
+                /* error */
+            /* Set the average price and enable listings button */
+            dispatch_async(dispatch_get_main_queue(), {
+                self.averagePriceLabel.text = String(500.0)
+                self.listingsButton.enabled = true
+            })
+            
                 return
         }
 									
