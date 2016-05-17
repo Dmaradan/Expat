@@ -393,8 +393,44 @@
                     <view key="view" contentMode="scaleToFill" id="0KW-uM-ix3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="A8X-oA-HUO">
+                                <rect key="frame" x="125" y="152" width="350" height="350"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="350" id="aOb-Wj-v9A"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gUf-Ri-Fca">
+                                <rect key="frame" x="20" y="123" width="560" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$ " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i6l-l4-4bE">
+                                <rect key="frame" x="20" y="528" width="560" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="i6l-l4-4bE" firstAttribute="top" secondItem="A8X-oA-HUO" secondAttribute="bottom" constant="26" id="EUD-9m-rCB"/>
+                            <constraint firstItem="gUf-Ri-Fca" firstAttribute="leading" secondItem="0KW-uM-ix3" secondAttribute="leadingMargin" id="OQQ-ct-C1K"/>
+                            <constraint firstItem="gUf-Ri-Fca" firstAttribute="centerX" secondItem="A8X-oA-HUO" secondAttribute="centerX" id="UR2-qr-ett"/>
+                            <constraint firstItem="xYi-n5-TRw" firstAttribute="top" secondItem="i6l-l4-4bE" secondAttribute="bottom" constant="51" id="buQ-3C-dvK"/>
+                            <constraint firstItem="A8X-oA-HUO" firstAttribute="top" secondItem="gUf-Ri-Fca" secondAttribute="bottom" constant="8" symbolic="YES" id="jOC-Ts-idt"/>
+                            <constraint firstItem="gUf-Ri-Fca" firstAttribute="trailing" secondItem="i6l-l4-4bE" secondAttribute="trailing" id="sfh-aU-YW4"/>
+                            <constraint firstItem="gUf-Ri-Fca" firstAttribute="leading" secondItem="i6l-l4-4bE" secondAttribute="leading" id="vZ0-f0-0cP"/>
+                            <constraint firstItem="gUf-Ri-Fca" firstAttribute="trailing" secondItem="0KW-uM-ix3" secondAttribute="trailingMargin" id="yRj-aX-vtj"/>
+                            <constraint firstItem="gUf-Ri-Fca" firstAttribute="top" secondItem="d4M-4g-ZXg" secondAttribute="bottom" constant="59" id="ycU-Ki-ngF"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="listingImage" destination="A8X-oA-HUO" id="hG1-Uz-Fgc"/>
+                        <outlet property="priceLabel" destination="i6l-l4-4bE" id="ccQ-8D-AV6"/>
+                        <outlet property="titleLabel" destination="gUf-Ri-Fca" id="bVe-Uk-n0N"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NM0-8h-5PJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

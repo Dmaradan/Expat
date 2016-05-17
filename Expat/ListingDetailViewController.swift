@@ -11,11 +11,25 @@ import UIKit
 class ListingDetailViewController: UIViewController {
     
     var theListing: Listing!
+    
+    // MARK: Outlets
+    
+    @IBOutlet weak var titleLabel: UILabel!
+    
+    @IBOutlet weak var priceLabel: UILabel!
+    
+    
+    @IBOutlet weak var listingImage: UIImageView!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         print(theListing.name)
+        
+        titleLabel.text = theListing.name as String
+        priceLabel.text = "$ " + String(theListing.price)
+        listingImage.image = theListing.picture
 
         // Do any additional setup after loading the view.
     }
