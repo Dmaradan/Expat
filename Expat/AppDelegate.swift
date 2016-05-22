@@ -28,6 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var averagePrice: Double?
     
     
+    var currencyTicker: String?
     
 
     var window: UIWindow?

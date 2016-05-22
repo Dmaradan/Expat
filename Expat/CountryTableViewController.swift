@@ -53,6 +53,13 @@ class CountryTableViewController: UITableViewController {
             
         cityVC?.countryCode = selectedCountryCell.nameLabel.text
         appDelegate.countryCode = selectedCountryCell.nameLabel.text
+        
+        // Set ticker
+            if appDelegate.countryCode == "Spain" {
+                appDelegate.currencyTicker = "€"
+            } else {
+                appDelegate.currencyTicker = "£"
+            }
             
         }
         

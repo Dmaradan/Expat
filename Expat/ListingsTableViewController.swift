@@ -10,6 +10,7 @@ import UIKit
 
 class ListingsTableViewController: UITableViewController {
     
+    let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     var listings: [Listing] = []
     var theIndexPath: Int?
 
@@ -36,7 +37,7 @@ class ListingsTableViewController: UITableViewController {
         let image = listings[indexPath.row].picture
                 
         cell.name.text = name as String
-        cell.price.text = String(price)
+        cell.price.text = appDelegate.currencyTicker! + " " + String(price)
         cell.picture.image = image
 
 

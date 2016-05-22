@@ -126,7 +126,7 @@ class DetailViewController: UIViewController {
                 /* error */
             /* Set the average price and enable listings button */
             dispatch_async(dispatch_get_main_queue(), {
-                self.averagePriceLabel.text = String(500.0)
+                self.averagePriceLabel.text = self.appDelegate.currencyTicker! + " " + String(500.0)
                 self.listingsButton.enabled = true
             })
             
@@ -165,7 +165,7 @@ class DetailViewController: UIViewController {
 
         /* Set the average price and enable listings button */
         dispatch_async(dispatch_get_main_queue(), {
-            self.averagePriceLabel.text = theAveragePrice
+            self.averagePriceLabel.text = self.appDelegate.currencyTicker! + " " + theAveragePrice
             self.listingsButton.enabled = true
         })
         

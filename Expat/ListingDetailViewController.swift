@@ -10,6 +10,7 @@ import UIKit
 
 class ListingDetailViewController: UIViewController {
     
+    let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     var theListing: Listing!
     
     // MARK: Outlets
@@ -28,7 +29,7 @@ class ListingDetailViewController: UIViewController {
         print(theListing.name)
         
         titleLabel.text = theListing.name as String
-        priceLabel.text = "$ " + String(theListing.price)
+        priceLabel.text = appDelegate.currencyTicker! + " " + String(theListing.price)
         listingImage.image = theListing.picture
 
         // Do any additional setup after loading the view.
