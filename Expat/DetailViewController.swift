@@ -117,7 +117,7 @@ class DetailViewController: UIViewController {
             /* IMPORTANT: IT LOOKS LIKE NESTORIA IS HAVING INTERNAL ISSUES WITH ITS API, SETTING DEFAULT VALUE
              IN CASE OF FAILURE */
             
-            self.appDelegate.averagePrice = 500.0
+            
 									
         /* GUARD: Is the 'metadata' key in theResponse? */
         guard let metadata = theResponse["metadata"] as? NSArray else {
@@ -128,6 +128,7 @@ class DetailViewController: UIViewController {
             dispatch_async(dispatch_get_main_queue(), {
                 self.averagePriceLabel.text = self.appDelegate.currencyTicker! + " " + String(500.0)
                 self.listingsButton.enabled = true
+                self.appDelegate.averagePrice = 500.0
             })
             
                 return
